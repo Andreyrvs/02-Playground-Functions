@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+  // Oi tudo bao
 }
 
 // Desafio 2
