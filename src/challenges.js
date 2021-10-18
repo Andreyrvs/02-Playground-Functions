@@ -43,11 +43,11 @@ function highestCount(a) {
   let numeroVezes = 0;
 
   for (let index = 0; index < a.length; index += 1) {
-    if (a[index] < maiorNumero) {
+    if (a[index] > maiorNumero) {
       maiorNumero = a[index];
     } return maiorNumero;
   }
-  for (let index = 0; index < a; index += 1) {
+  for (let index = 0; index < a.length; index += 1) {
     if (maiorNumero === a[index]) {
       numeroVezes += 1;
     }
@@ -66,18 +66,17 @@ function highestCount(a) {
 // }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
   // seu código aqui
 
 }
 
 // Desafio 8
-function fizzBuzz(a) {
+function fizzBuzz() {
   // seu código aqui
   // let retornaArray;
   // for (let index = 0; index < a.length; index += 1) {
-  //   if (a[index] ) {    
-  //   }
+  //   if (a[index] ){  //   }
   // }
 }
 
