@@ -23,7 +23,7 @@ function splitSentence(a) {
 // Desafio 4
 function concatName(a) {
   // seu código aqui
-  return ((a[a.length - 1]) + ', ' + a[0]);
+  return `${a[a.length - 1]}${','} ${a[0]}`;
 }
 // Desafio 5
 function footballPoints(a, b) {
@@ -45,16 +45,14 @@ function highestCount(a) {
   for (let index = 0; index < a.length; index += 1) {
     if (a[index] > maiorNumero) {
       maiorNumero = a[index];
-    } return maiorNumero;
-  }
-  for (let index = 0; index < a.length; index += 1) {
-    if (maiorNumero === a[index]) {
+    } else if (maiorNumero === a[index]) {
       numeroVezes += 1;
+    } else if (numeroVezes !== 0) {
+      numeroVezes -= 1;
     }
+    return numeroVezes;
   }
-  return numeroVezes;
 }
-
 // function cats(cat1, cat2) {
 //   if (cat1 < cat2) {
 //     return cat1 += 1;
