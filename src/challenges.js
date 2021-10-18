@@ -17,8 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(a) {
   // seu código aqui
-  a.split('');
-  return a;
+  return (a.split(' '));
 }
 
 // Desafio 4
@@ -40,6 +39,7 @@ function footballPoints(a, b) {
 // Desafio 6
 function highestCount() {
   // seu código aqui
+
 }
 
 // Desafio 7
