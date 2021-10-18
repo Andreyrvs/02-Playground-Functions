@@ -39,41 +39,46 @@ function footballPoints(a, b) {
 // Desafio 6
 function highestCount(a) {
   // seu código aqui
-  let maior = a[0];
-  for (let index = 0; index < a.length; index += 1) {
+  let maiorNumero = a[0];
+  let numeroVezes = 0;
 
-    for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
-      if (a[index] > a[secondIndex]) {
-        maior += 1;
-        return maior;
-      }
-      return a;
+  for (let index = 0; index < a.length; index += 1) {
+    if (a[index] < maiorNumero) {
+      maiorNumero = a[index];
+    } return maiorNumero;
+  }
+  for (let index = 0; index < a; index += 1) {
+    if (maiorNumero === a[index]) {
+      numeroVezes += 1;
     }
   }
+  return numeroVezes;
 }
+
+// function cats(cat1, cat2) {
+//   if (cat1 < cat2) {
+//     return cat1 += 1;
+//   }
+// }
+
+// function cat2Mouse(cat2, mouse) {
+
+// }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 < mouse && cat1 < cat2) {
-    console.log(cat1);
-  } else if (cat2 < mouse && cat2 < cat1) {
-    console.log(cat2);
-  } else {
-    console.log('os gatos trombam e o rato foge');
-  }
+
 }
 
 // Desafio 8
 function fizzBuzz(a) {
   // seu código aqui
-  let retornaArray;
-  for (let index = 0; index < a.length; index += 1) {
-    if (a[index] ) {
-      
-    }
-    
-  }
+  // let retornaArray;
+  // for (let index = 0; index < a.length; index += 1) {
+  //   if (a[index] ) {    
+  //   }
+  // }
 }
 
 // Desafio 9
