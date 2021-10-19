@@ -47,30 +47,16 @@ function highestCount(lagerInArray) {
       maiorNumero = lagerInArray[i];
     } else if (maiorNumero === lagerInArray[i]) {
       ocorrencias += 1;
-    } else if (lagerInArray <= 0) {
-      ocorrencias += 1;
     }
     return ocorrencias;
   }
 }
 
-function closerCat(mouse, cat2) {
-  let cat2Distance;
-  if (cat2 < mouse) {
-    cat2Distance = 'cat2';
-  }
-  return cat2Distance;
-}
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse() {
   // seu código aqui
-  let cat1Distance;
-  if (cat1 < closerCat(mouse, cat2)) {
-    cat1Distance = 'cat1';
-  }
-  return cat1Distance;
 }
-catAndMouse(1, 0, 2);
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
