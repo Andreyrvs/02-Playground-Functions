@@ -15,60 +15,62 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(a) {
+function splitSentence(cutArray) {
   // seu código aqui
-  return (a.split(' '));
+  return (cutArray.split(' '));
 }
 
 // Desafio 4
-function concatName(a) {
+function concatName(theLastFirst) {
   // seu código aqui
-  return `${a[a.length - 1]}${','} ${a[0]}`;
+  return `${theLastFirst[theLastFirst.length - 1]}${','} ${theLastFirst[0]}`;
 }
 // Desafio 5
-function footballPoints(a, b) {
+function footballPoints(victoryPoints, tiePoints) {
   // seu código aqui
   let wins = 3;
   let ties = 1;
-  if (a <= 0 && b <= 0) {
+  if (victoryPoints <= 0 && tiePoints <= 0) {
     return 0;
   }
-  return a * wins + b * ties;
+  return victoryPoints * wins + tiePoints * ties;
 }
 
 // Desafio 6
-function highestCount(a) {
+function highestCount(lagerInArray) {
   // seu código aqui
-  let maiorNumero = a[0];
-  let numeroVezes = 0;
+  let maiorNumero = lagerInArray[0];
+  let ocorrencias = 0;
 
-  for (let index = 0; index < a.length; index += 1) {
-    if (a[index] > maiorNumero) {
-      maiorNumero = a[index];
-    } else if (maiorNumero === a[index]) {
-      numeroVezes += 1;
-    } else if (numeroVezes !== 0) {
-      numeroVezes -= 1;
+  for (let i = 0; i < lagerInArray.length; i += 1) {
+    if (maiorNumero > lagerInArray[i]) {
+      maiorNumero = lagerInArray[i];
+    } else if (maiorNumero === lagerInArray[i]) {
+      ocorrencias += 1;
+    } else if (lagerInArray <= 0) {
+      ocorrencias += 1;
     }
-    return numeroVezes;
+    return ocorrencias;
   }
 }
-// function cats(cat1, cat2) {
-//   if (cat1 < cat2) {
-//     return cat1 += 1;
-//   }
-// }
 
-// function cat2Mouse(cat2, mouse) {
-
-// }
-
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
-
+function closerCat(mouse, cat2) {
+  let cat2Distance;
+  if (cat2 < mouse) {
+    cat2Distance = 'cat2';
+  }
+  return cat2Distance;
 }
-
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui
+  let cat1Distance;
+  if (cat1 < closerCat(mouse, cat2)) {
+    cat1Distance = 'cat1';
+  }
+  return cat1Distance;
+}
+catAndMouse(1, 0, 2);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
