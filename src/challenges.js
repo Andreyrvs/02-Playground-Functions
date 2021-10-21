@@ -50,24 +50,36 @@ function highestCount(lagerInArray) {
     } else if (lagerInArray[index] >= 9) {
       count += 1;
       // console.log(count);
-    } else if (lagerInArray[index] === -1) {
+    } else if (lagerInArray[index] < maxnumber) {
+      maxnumber = maxnumber * -1;
       count += 1;
     }
   }
   return count;
 }
-highestCount([0, 0, 0]);
-// Desafio 7
+highestCount([-2, -2, -1]);
+// Desafio 7 
+// Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
+
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let cat2Diff = cat2 - mouse;
   let cat1Diff = cat1 - mouse;
   let winningCat;
+
+  if (cat1Diff < 0) {
+    cat1Diff = cat1Diff * -1;
+  }
+
+  if (cat2Diff < 0) {
+    cat2Diff = cat2Diff * -1;
+  } 
+  
   if (cat2Diff < cat1Diff) {
     winningCat = 'cat2';
   } else if (cat1Diff < cat2Diff) {
     winningCat = 'cat1';
-  } else if (cat2Diff === mouse && cat1Diff === mouse) {
+  } else if (cat1Diff === cat2Diff){
     winningCat = 'os gatos trombam e o rato foge';
   }
   return winningCat;
@@ -75,19 +87,14 @@ function catAndMouse(mouse, cat1, cat2) {
 catAndMouse(1, 0, 2);
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(params) {
   // seu código aqui
   let retornaArray;
-  for (let index = 0; index < params.length; index += 1) {
-    if (params[index] % 3) {
-      retornaArray = params.push('fizz');
-    } else if (params[index] % 5) {
-      retornaArray = params.push('buzz');
-    } else if (params[index] % 3 && params[index] % 5) {
-      retornaArray = params.push('FizzBuzz')
-    } else {
-      retornaArray = params.push('bug !')
-    }
+  for (let key of params) {
+    if (params[key] % 3 === 0) {
+      retornaArray = 'fizz';
+      console.log(retornaArray);
+    }    
   }
   return retornaArray;
 }
