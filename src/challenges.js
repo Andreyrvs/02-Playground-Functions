@@ -36,44 +36,80 @@ function footballPoints(victoryPoints, tiePoints) {
   return victoryPoints * wins + tiePoints * ties;
 }
 
-// Desafio 6
+// Desafio 6 Não estou conseguindo verifiar negativo nem 0
 function highestCount(lagerInArray) {
-  // seu código aqui
-  let maiorNumero = lagerInArray[0];
-  let ocorrencias = 0;
+  // seu código aqui-
+  let maxnumber = lagerInArray[0];
+  let count = 0;
 
-  for (let i = 0; i < lagerInArray.length; i += 1) {
-    if (maiorNumero > lagerInArray[i]) {
-      maiorNumero = lagerInArray[i];
-    } else if (maiorNumero === lagerInArray[i]) {
-      ocorrencias += 1;
+  for (let index = 0; index < lagerInArray.length; index += 1) {
+    if (lagerInArray[index] > maxnumber[index]) {
+      maxnumber = lagerInArray[index];
+      maxnumber += 1;
+      console.log(maxnumber);
+    } else if (lagerInArray[index] >= 9) {
+      count += 1;
+      // console.log(count);
+    } else if (lagerInArray[index] === -1) {
+      count += 1;
     }
-    return ocorrencias;
   }
+  return count;
 }
-
+highestCount([0, 0, 0]);
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat2Diff = cat2 - mouse;
+  let cat1Diff = cat1 - mouse;
+  let winningCat;
+  if (cat2Diff < cat1Diff) {
+    winningCat = 'cat2';
+  } else if (cat1Diff < cat2Diff) {
+    winningCat = 'cat1';
+  } else if (cat2Diff === mouse && cat1Diff === mouse) {
+    winningCat = 'os gatos trombam e o rato foge';
+  }
+  return winningCat;
 }
+catAndMouse(1, 0, 2);
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
-  // let retornaArray;
-  // for (let index = 0; index < a.length; index += 1) {
-  //   if (a[index] ){  //   }
-  // }
+  let retornaArray;
+  for (let index = 0; index < params.length; index += 1) {
+    if (params[index] % 3) {
+      retornaArray = params.push('fizz');
+    } else if (params[index] % 5) {
+      retornaArray = params.push('buzz');
+    } else if (params[index] % 3 && params[index] % 5) {
+      retornaArray = params.push('FizzBuzz')
+    } else {
+      retornaArray = params.push('bug !')
+    }
+  }
+  return retornaArray;
 }
-
+// fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
 function encode() {
   // seu código aqui
+  // for (let index = 0; index < params.length; index += 1) {
+    
+  //   for (let jdex = 0; jdex < params.length; jdex += 1) {
+  //     if (params[jdex] = ) {
+        
+  //     }
+  //   }
+  // }
 }
+
+encode();
 function decode() {
   // seu código aqui
 }
-
+decode();
 module.exports = {
   calcArea,
   catAndMouse,
