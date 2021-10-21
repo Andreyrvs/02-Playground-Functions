@@ -50,15 +50,14 @@ function highestCount(lagerInArray) {
     } else if (lagerInArray[index] >= 9) {
       count += 1;
       // console.log(count);
-    } else if (lagerInArray[index] < maxnumber) {
-      maxnumber = maxnumber * -1;
+    } else if (lagerInArray[index] / maxnumber === 0){
       count += 1;
     }
   }
   return count;
 }
 highestCount([-2, -2, -1]);
-// Desafio 7 
+// Desafio 7
 // Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
 
 function catAndMouse(mouse, cat1, cat2) {
@@ -89,16 +88,21 @@ catAndMouse(1, 0, 2);
 // Desafio 8
 function fizzBuzz(params) {
   // seu código aqui
-  let retornaArray;
+  let retornaArray = [];
   for (let key of params) {
-    if (params[key] % 3 === 0) {
-      retornaArray = 'fizz';
-      console.log(retornaArray);
-    }    
+    if (key % 3 === 0 && key % 5 === 0) {
+      retornaArray.push('fizzBuzz');
+    } else if (key % 3 === 0) {
+      retornaArray.push('fizz');    
+    } else if (key % 5 === 0) {
+      retornaArray.push('buzz');
+    } else {
+      retornaArray.push('bug!');
+    }
   }
   return retornaArray;
 }
-// fizzBuzz([2, 15, 7, 9, 45]);
+fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
 function encode() {
   // seu código aqui
