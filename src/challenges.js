@@ -105,26 +105,20 @@ fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let vowels = 'a, e, i, o, u';
-  let numbersVowels = '1, 2, 3, 4, 5';
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
 
-  for (let index = 0; index < string.length; index += 1) {
-    let stringPosition = string[index];
-    let regex = /\s*;\s*/;
-    stringPosition.split(regex);
-
-    if (stringPosition === vowels) {
-      stringPosition.replace(numbersVowels);
-      console.log(stringPosition);
-    }
-  }
+  return string;
 }
-encode('How are you today?');
 
-function decode() {
+function decode(string) {
   // seu código aqui
+
 }
-decode();
+
 module.exports = {
   calcArea,
   catAndMouse,
