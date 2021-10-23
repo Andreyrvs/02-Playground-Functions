@@ -3,7 +3,8 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
     return true;
-  } return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -17,7 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(cutArray) {
   // seu código aqui
-  return (cutArray.split(' '));
+  return cutArray.split(' ');
 }
 
 // Desafio 4
@@ -43,20 +44,18 @@ function highestCount(lagerInArray) {
   let count = 0;
 
   for (let index = 0; index < lagerInArray.length; index += 1) {
-    if (lagerInArray[index] > maxnumber[index]) {
+    if (lagerInArray[index] > maxnumber) {
       maxnumber = lagerInArray[index];
-      maxnumber += 1;
-      console.log(maxnumber);
-    } else if (lagerInArray[index] >= 9) {
-      count += 1;
-      // console.log(count);
-    } else if (lagerInArray[index] / maxnumber === 0){
+    }
+  }
+  for (let index = 0; index < lagerInArray.length; index += 1) {
+    if (maxnumber === lagerInArray[index]) {
       count += 1;
     }
   }
   return count;
 }
-highestCount([-2, -2, -1]);
+
 // Desafio 7
 // Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
 
@@ -72,13 +71,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat2Diff < 0) {
     cat2Diff = cat2Diff * -1;
-  } 
-  
+  }
+
   if (cat2Diff < cat1Diff) {
     winningCat = 'cat2';
   } else if (cat1Diff < cat2Diff) {
     winningCat = 'cat1';
-  } else if (cat1Diff === cat2Diff){
+  } else if (cat1Diff === cat2Diff) {
     winningCat = 'os gatos trombam e o rato foge';
   }
   return winningCat;
@@ -93,7 +92,7 @@ function fizzBuzz(params) {
     if (key % 3 === 0 && key % 5 === 0) {
       retornaArray.push('fizzBuzz');
     } else if (key % 3 === 0) {
-      retornaArray.push('fizz');    
+      retornaArray.push('fizz');
     } else if (key % 5 === 0) {
       retornaArray.push('buzz');
     } else {
@@ -104,19 +103,24 @@ function fizzBuzz(params) {
 }
 fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-  // for (let index = 0; index < params.length; index += 1) {
-    
-  //   for (let jdex = 0; jdex < params.length; jdex += 1) {
-  //     if (params[jdex] = ) {
-        
-  //     }
-  //   }
-  // }
-}
+  let vowels = 'a, e, i, o, u';
+  let numbersVowels = '1, 2, 3, 4, 5';
 
-encode();
+  for (let index = 0; index < string.length; index += 1) {
+    let stringPosition = string[index];
+    let regex = /\s*;\s*/;
+    stringPosition.split(regex);
+
+    if (stringPosition === vowels) {
+      stringPosition.replace(numbersVowels);
+      console.log(stringPosition);
+    }
+  }
+}
+encode('How are you today?');
+
 function decode() {
   // seu código aqui
 }

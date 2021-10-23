@@ -1,0 +1,31 @@
+01 duas funções já criadas 
+02 encode deve receber uma string como parametro
+03 encode deve trocar as vogais minusculas par numeros
+04 
+
+// Desaafio 09
+
+01 criar uma string com as vogais - OK!
+02 usar um loop para rodar pelo parametro - OK!
+0  cortar o parametro com .split ou .slice -  OK ! 
+03 criar um if para verificar as vogais do parametro
+0  preciso empurrar as novas letras
+04 Retornar a string codificada
+
+
+## Desafio 10
+
+01 function que recebe um array [] de nomes tech como parametro.
+02 function recebe 2° parametro chamado `name` com um nome
+03 para cada tecnologia do array crie um objeto -
+{
+  tech: "NomeTech",
+  name: name
+}
+
+04 esse objeto deve ser inseridos em uma nova lista em ordem crescente apartir de tech.
+
+05 A saida da function deve ser uma lista de objetos ordenada pelo tech
+
+06 Se o arraay estiver vazio deve retornar 'Vazio!'
+
