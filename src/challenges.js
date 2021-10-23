@@ -116,7 +116,13 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
+  string = string.replace(/1/g, 'a');
+  string = string.replace(/2/g, 'e');
+  string = string.replace(/3/g, 'i');
+  string = string.replace(/4/g, 'o');
+  string = string.replace(/5/g, 'u');
 
+  return string;
 }
 
 module.exports = {
