@@ -11,13 +11,11 @@ function techList(tech, name) {
     };
     newArray.push(meuObjeto);
   }
-  if (newArray.length < 0) {
+  if (newArray.length === 0) {
     return 'Vazio!';
   }
   return newArray;
 }
-
-
 // ## Desafio 10
 
 // 01 function que recebe um array [] de nomes tech como parametro.
@@ -27,15 +25,9 @@ function techList(tech, name) {
 //   tech: "NomeTech",
 //   name: name
 // }
-
 // 04 esse objeto deve ser inseridos em uma nova lista em ordem crescente apartir de tech.
-
 // 05 A saida da function deve ser uma lista de objetos ordenada pelo tech
-
 // 06 Se o arraay estiver vazio deve retornar 'Vazio!'
-
-
-
 
 // Desafio 11
 function generatePhoneNumber() {
