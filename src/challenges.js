@@ -121,7 +121,6 @@ function decode(string) {
   string = string.replace(/3/g, 'i');
   string = string.replace(/4/g, 'o');
   string = string.replace(/5/g, 'u');
-
   return string;
 }
 
