@@ -105,6 +105,9 @@ fizzBuzz([2, 15, 7, 9, 45]);
 // Desafio 9
 function encode(string) {
   // seu código aqui
+  // O meu /a é a letra a ser substituida
+  // O meu /g está trocando todas as letras ao mesmo tempo
+  // O meu , '1' é o que eu quero substituir
   string = string.replace(/a/g, '1');
   string = string.replace(/e/g, '2');
   string = string.replace(/i/g, '3');
