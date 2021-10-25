@@ -20,7 +20,10 @@ function splitSentence(cutArray) {
   // seu código aqui
   return cutArray.split(' ');
 }
-
+/**
+ * Consoltei a documentação para utilizar um metodo que não foi ensinado na Trybe
+ * link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+ */
 // Desafio 4
 function concatName(theLastFirst) {
   // seu código aqui
@@ -37,7 +40,7 @@ function footballPoints(victoryPoints, tiePoints) {
   return victoryPoints * wins + tiePoints * ties;
 }
 
-// Desafio 6 Não estou conseguindo verifiar negativo nem 0
+// Desafio 6
 function highestCount(lagerInArray) {
   // seu código aqui-
   let maxnumber = lagerInArray[0];
@@ -55,10 +58,13 @@ function highestCount(lagerInArray) {
   }
   return count;
 }
+/**
+ * Consultei o Repositório do Gilson.Fernades o nickname:DevJunior21
+ * Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
+ * 
+*/
 
 // Desafio 7
-// Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
-
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let cat2Diff = cat2 - mouse;
