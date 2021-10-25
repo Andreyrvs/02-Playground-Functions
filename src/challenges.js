@@ -61,8 +61,7 @@ function highestCount(lagerInArray) {
 /**
  * Consultei o Repositório do Gilson.Fernades o nickname:DevJunior21
  * Referencia (https://github.com/tryber/sd-014-b-project-playground-functions/blob/9b948a8ece32f5b0ef3b594b79951f99502ca1fe/src/challenges.js)
- * 
-*/
+ */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -74,11 +73,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1Diff < 0) {
     cat1Diff = cat1Diff * -1;
   }
-
   if (cat2Diff < 0) {
     cat2Diff = cat2Diff * -1;
   }
-
   if (cat2Diff < cat1Diff) {
     winningCat = 'cat2';
   } else if (cat1Diff < cat2Diff) {
